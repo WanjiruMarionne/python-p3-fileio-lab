@@ -7,8 +7,8 @@ def append_file(file_name, append_content):
     file_name = str(file_name) + ".txt"
     with open(file_name, 'a') as file:
         if file.tell() != 0:
-            append_content = append_content.lstrip("\n")  
-            append_content = "\n" + append_content
+            append_content = append_content.lstrip("")  
+            append_content = "" + append_content
         file.write(append_content)
 
 def read_file(file_name):
